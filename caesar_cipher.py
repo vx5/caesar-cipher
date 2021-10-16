@@ -1,5 +1,6 @@
 # Constants used for both encryption and decryption
 minVal = ord('a')
+numLetters = 26
 
 # INPUTS:
 # - Text to be encrypted (str) [text]
@@ -17,7 +18,7 @@ def caesarEncrypt(text, key):
 		if not char.isalpha(): continue
 		# Shifts letters up alphabet by <key> chars
 		adjNum = ord(char) - minVal
-		encrNum = (adjNum + key) % len(alphabet)
+		encrNum = (adjNum + key) % numLetters
 		encrChar = chr(encrNum + minVal)
 		output.append(encrChar)
 	return ''.join(output)
@@ -37,7 +38,7 @@ def caesarDecrypt(text, key):
 			# Shifts characters down alphabet by <key> chars
 			# to reverse encryption
 			adjNum = ord(char) - minVal
-			decrNum = (adjNum - key) % len(alphabet)
+			decrNum = (adjNum - key) % numLetters
 			decrChar = chr(decrNum + minVal)
 		output.append(decrChar)
 	return ''.join(output)
