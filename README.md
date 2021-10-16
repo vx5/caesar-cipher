@@ -4,7 +4,7 @@
 
 This project is a simple, short module which implements Caesar cipher encryption and decryption functions. This approach uses an integer key to shift each character by the number of characters indicated by the key (e.g., if the character is 'A' and the key is 3, the encrypted character is 'D'). See the image below for an example:
 
-![Example](https://github.com/vx5/caesar-cipher/blob/main/images/screenshot.png)
+![Example](https://github.com/vx5/caesar-cipher/blob/master/images/screenshot.png)
 
 ## How to use
 
