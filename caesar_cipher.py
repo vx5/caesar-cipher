@@ -7,8 +7,11 @@ MIN_VAL = ord('a')
 NUM_LETTERS = 26
 
 
-def caesar_encrypt(text, key):
+def caesar_encrypt(text: str, key: int) -> str:
     """
+    Encrypts text using Caesar cipher approach.
+    Non-alpha characters will be omitted from the encrypted string.
+
     INPUTS:
     Text to be encrypted (str) [text]
     Encryption key (int) [key]
@@ -33,14 +36,17 @@ def caesar_encrypt(text, key):
     return ''.join(output)
 
 
-def caesar_decrypt(text, key):
+def caesar_decrypt(text: str, key: int) -> str:
     """
-        INPUTS:
-        Text to be decrypted (str) [text]
-        Encryption key (int) [key]
-        OUTPUT:
-        Encrypted text (str)
-        """
+    Decrypts text using Caesar cipher approach.
+    Non-alpha characters will be omitted from the decrypted string.
+
+    INPUTS:
+    Text to be decrypted (str) [text]
+    Encryption key (int) [key]
+    OUTPUT:
+    Encrypted text (str)
+    """
     lower_text = text.lower()
     output = []
     for char in lower_text:
